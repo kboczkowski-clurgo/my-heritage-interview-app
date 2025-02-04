@@ -1,0 +1,51 @@
+nav {
+  width: 100vw;
+  height: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  .logo {
+    color: var(--text-primary);
+    font-weight: bold;
+    font-size: 25px;
+    position: absolute;
+    left: 1rem;
+  }
+
+  .nav__links {
+    position: absolute;
+    right: 1rem;
+    display: flex;
+
+    &.center {
+      position: relative;
+      width: 100vw;
+      justify-content: center;
+      display: flex;
+    }
+
+    a {
+      color: var(--text-black);
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--text-primary);
+      }
+    }
+
+    .link {
+      margin: 0.7rem 0.5rem;
+    }
+
+    .sign-in {
+      color: var(--text-primary);
+      font-weight: bold;
+    }
+  }
+}

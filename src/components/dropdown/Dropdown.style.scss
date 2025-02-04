@@ -1,0 +1,14 @@
+.dropdown {
+  select {
+    border: 2px solid var(--text-black);
+    padding: 4px 8px;
+    color: var(--text-black);
+    font-weight: bold;
+    border-radius: 5px;
+
+    &:focus,
+    &:hover {
+      outline: none;
+    }
+  }
+}

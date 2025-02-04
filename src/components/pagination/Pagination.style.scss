@@ -1,0 +1,36 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  button {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    color: var(--text-gray);
+    transform: all 0.2s;
+    padding: 3px 4px;
+
+    &:hover:not(.prev):not(.next) {
+      color: var(--text-black);
+      border-bottom-color: var(--text-black);
+    }
+  }
+
+  .active {
+    color: var(--text-black);
+    font-weight: bolder;
+    border-bottom-color: var(--text-primary);
+  }
+
+  .prev,
+  .next {
+    color: var(--text-primary);
+    font-weight: bold;
+
+    &[disabled] {
+      color: var(--text-light-gray);
+    }
+  }
+}

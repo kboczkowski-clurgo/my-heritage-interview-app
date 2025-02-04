@@ -1,0 +1,12 @@
+.offer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 22px;
+  position: relative;
+}
+
+.offer__placehoder {
+  height: calc(100vh - 200px);
+  width: 100%;
+}

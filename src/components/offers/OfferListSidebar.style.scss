@@ -1,0 +1,31 @@
+.offer__list-sidebar {
+  position: absolute;
+  top: 0;
+  right: -100vw;
+  width: 100vw;
+  height: calc(100vh - 78px);
+  overflow: auto;
+  transition: right 0.3s;
+  background: #fff;
+
+  &.show {
+    right: 0;
+  }
+}
+
+.fab__wrapper {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.fab {
+  background: var(--text-dark-gray);
+  border: 0;
+  color: #fff;
+  padding: 15px;
+  border-radius: 30px;
+  width: 100px;
+}

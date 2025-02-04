@@ -1,0 +1,60 @@
+@use '../../style/breakpoints.scss' as *;
+
+.offer__item {
+  border-radius: 16px;
+  box-shadow: rgba(29, 71, 123, 0.04) 0px 5px 10px,
+    rgba(29, 71, 123, 0.12) 0px 1px 5px;
+  display: flex;
+  height: 165px;
+  align-items: center;
+  overflow: hidden;
+
+  .offer__item-images {
+    display: flex;
+    border-right: 1px solid #e5e5e5;
+    height: 100%;
+
+    img {
+      height: 100%;
+      width: 254px;
+      object-fit: cover;
+    }
+  }
+
+  .offer__item-details {
+    font-size: 14px;
+    padding: 16px 32px;
+
+    p {
+      margin: 0;
+      color: var(--text-gray);
+    }
+
+    .price {
+      color: var(--text-black);
+      font-weight: bold;
+      font-size: 19px;
+    }
+  }
+}
+
+@include tablet {
+  .offer__item {
+    height: max-content;
+    flex-direction: column;
+
+    .offer__item-images {
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: 250px;
+      }
+    }
+
+    .offer__item-details {
+      padding: 16px 22px;
+      width: 100%;
+    }
+  }
+}
