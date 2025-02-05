@@ -29,7 +29,7 @@ export const OfferList = () => {
 
   const sortedOffers = useSortedOffers(offers, selectedOption);
   const { pages, totalPages } = usePagination(sortedOffers.length, PAGE_SIZE);
-  const pageOfOffers = usePaginatedOffers(offers, currentPage, PAGE_SIZE);
+  const pageOfOffers = usePaginatedOffers(sortedOffers, currentPage, PAGE_SIZE);
 
   return (
     <>
@@ -51,16 +51,16 @@ export const OfferList = () => {
         {!loading && !sortedOffers.length && (
           <>
             <div className="no-offers">No offers</div>
+          </>
+        )}
+        {!loading && (
+          <>
             <Pagination
               pages={pages}
               totalPages={totalPages}
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}
             />
-          </>
-        )}
-        {!loading && (
-          <>
             <Footer />
           </>
         )}
